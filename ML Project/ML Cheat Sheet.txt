@@ -1,0 +1,359 @@
+
+# pandas module ==>
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+1) reading csv data using read_csv() . syntax ==> df= pd.read_csv(r'path')
+                                                  print(df.head()) ==> print 5 row of csv with header.
+
+2) print(df.head(x)) ==> print x row of csv file
+
+3) print(df.tail()) ==> print last 4 row of csv file
+
+4) df.shape ==>return no of row vs cols
+
+5) df.size ==> print total no of cells in csv file
+
+6) len(df) ==> gives no of rows
+
+7) df.columns ==> gives name of columns
+
+8) Extracting specific column ==> print(df['column_name']) ==> gives a series or 1D array
+
+9) Extracting specific column with selected rows ==> print(df['column_name'][:x]) ==> print column values from 0 to xth row.
+
+10) Extracting specific value ==> print(df['column_name'][row_index])
+
+11)Extracting 2 colums ==> print(df[['column_name1','column_name2']])
+
+12) Sorting a column value ==> df.sort_values('column_name')
+
+13) Grouping and counting same values in a column. ==> degree_counts = df['column'].value_counts()
+
+14) Printing bar graph of grouped values ==> plt.show(degree.plot(kind='bar'))
+
+15) Storing all columns except last column. x = obj.iloc[:,:,-1]
+
+
+##  Excercise to print previous year employers data with histogram==>
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df=pd.read_csv('PastHires.csv')
+df_new=df[['Previous employers', 'Hired']][5:10]
+print(df.head())
+degree=df_new['Previous employers'].value_counts()
+plt.show(degree.plot(kind='bar'))
+
+
+##  Types of Data
+
+1) Discreate Numerical Integers ==> countable
+
+2) Continous Numerical Float ==> infinte number of data points
+
+3) Categorical Data ==> uncomparable like gender,dont have mathematical meaning
+
+4) Ordinal data ==> mixture of categorical or numerical data . ex ==> star rating of movies
+
+
+## Basic Stastics 
+
+1) Mean ==> average or ratio of total values by total no of sample values.
+
+2) Median ==> sort all values and find middle value between minimum and maximum values.(in case of even data points take average of both calculate median)
+
+3) Mode ==> most common value in data set. (not relevant in continous data set)
+
+4) Variance(sigma Square) ==> average sqaured difference from the mean. It tells how data frequencies are spread out.
+
+5) Standar Deviation ==> Square root of variance. tells outliers of your data set.
+
+6) Sample ==> choosen data points of population(all samples).
+
+7) Sample variance ==> the no of samples is just no of data points in normal population data set - 1
+
+8) Probability Density Function (Continous Data)==> gives probabilty of occurrence between mean and standard deviation. ex==> normal distribution.
+
+9) Probability Mass Function( Discreate Data)==> gives probabilty of occurrence between mean and standard deviation. ex==> binomial distribution.
+
+
+## Printing mean()
+
+income = np.random.normal(mean_value,standard_deviation,no of sample points)
+print(np.mean(income)) || print(income.mean())
+
+## Printing median()
+
+income = np.random.normal(mean_value,standard_deviation,no of sample points)
+print(np.median(income)) || print(income.median())
+
+## Appending value to income variable ==> income=np.append(income,[integral value])
+
+
+## Printing Histogram of income in x no bars/buckets ==> plt.hist(income,x)
+                                                         plt.show()
+
+## Printing mode 
+from scipy import stats
+ages= np.random.randint(start_age , high= age_limt,no of values)
+print(stats.mode(ages)) ==> print maximum no of age frequency between range with no of frequencies.
+
+
+## Printin standar deviation and variance ==>
+
+print(income.std())
+print(income.var())
+
+
+Types of Data Distribution ==>
+
+1) Uniform Data distribution ==> constant hight of all bars in a specific limit.
+
+value=.np.random.uniform(start_val,end_val,data_points)
+plt.hist(value,50)
+plt.show()
+
+2) Normal Gaussian Structure ==>
+
+from scipy.stats import norm 
+x=np.arange(start,end,increment_precision)
+plt.plot(x,norm.pdf(x))
+plt.show()
+
+3) Exponential PDF ==>
+
+from scipy.stats import expon
+x=np.arange(start,end,increment_precision)
+plt.plot(x,expon.pdf(x))
+plt.show()
+
+4) Probability Mass Function (Binomial) ==>
+
+
+from scipy.stats import binom
+x=np.arange(start,end,increment_precision)
+plt.plot(x,binom.pmf(x,x_scale_value,scale_precision))
+plt.show()
+
+
+5) Poisson Probability Mass Function ==> gives information of other values probability if you know others.
+
+
+from scipy.stats import poisson
+x=np.arange(start,end,increment_precision)
+plt.plot(x,binom.pmf(x,mean))
+plt.show()
+
+
+6) Percentile(%) ==> tells percentage of values lie under a value. ex ==> Income Distribution.
+
+cortiles is the rectangular area in normal distribution that covers 50% of the data.
+
+print(np.percentile(income,percentile_value))
+
+
+7) Moments ==> its a measure of shape of PDF. First moments is mean,second is variance and third moment is skew and fourth is kurtosis(tells peakness of NDC).
+
+1) First Moment(Mean) ==> np.mean(x)
+
+2) Second Moment(variance) ==> np.var(x)
+
+3) Third Moment(Skew) ==> stats.skew(x)
+
+4) Fourth Moment(Kurtosis) ==> stats.kurtosis(x)
+
+
+## Matplotlib ==>
+
+import matplotlib.pyplot as plt
+
+
+1) printing multiple graph in one window =>
+
+plt.plot(x,norm.pdf(x))
+plt.plot(x,norm.pdf(x,mean,standard_deviation))
+
+2) Saving graph as image =>
+
+plt.savefig(r'path\filename.type',format='png')
+
+3) Adjusting printing axis ==>
+
+axes=plt.axes()
+axes.set_xlims([start,end])
+axes.set_ylims([start,end])
+axes.set_xticks([-5,-4,-3,-2,-1,0,1,2,3,4,5])
+axes.set_yticks([-5,-4,-3,-2,-1,0,1,2,3,4,5])
+
+4) Adding a Grid ==> axes.grid()
+
+5) Changing type and color of the graph curve
+
+plt.plot(x,norm.pdf(x),'b-')  ==> print blue solid line.
+plt.plot(x,norm.pdf(x),'r:')  ==> print red dash line.
+
+6) labeling axis ==>
+
+plt.xlabel('label')
+plt.ylabel('label')
+
+7) Adding a legend==>
+plt.legend(['Graph1',Graph2'],loc=1,2,3,4)
+
+8) Printing xkcd() comic type graph ==>
+
+plt.xkcd()
+
+
+9) Plotting a Pie chart==>
+
+plt.pie(value=values,label=labels,color=colors,explode=explodes)
+plt.title('title')
+plt.show()
+
+10) Plotting a bar chart==>
+
+plt.bar(year,color=col,height=list_of_bar_hights)           no of year element = no of hight elements
+plt.title('title')
+plt.show()
+
+
+11) Scatter plot ==>
+
+x=randn(data point)
+y=randn(data point)
+plt.scatter(x,y)
+plt.show()
+
+
+12) Box and whisker plot() ==> plt.boxplot(obj) ==> print cortile rectangular box containing 
+
+
+## Covariance ==> Measure of how values two values are varying may be random.
+
+## Correlation ==> linear variation of one variable wrt to another variable. np.corrcoef(x,y)
+
+import numpy as np
+import pandas as pd 
+import matplotlib.pyplot as plt 
+import scipy.stats as sp 
+
+def m(x):
+    y=x.mean()
+    return [i-y for i in x ]
+
+def cov(x,y):
+    n=len(x)
+    return np.dot(m(x),m(y))/n-1
+
+x=np.random.normal(3,1,1000)
+y=np.random.normal(50,10,1000)
+
+plt.scatter(x,y)
+plt.show()
+print(cov(x,y))
+
+
+## Conditional Probability ==> probability of occuring B after event A.
+
+
+## random.choice(lisr || range) ==> choose a random number
+
+## random.random() ==> gives a random value between 0 and 1.
+
+
+## Bayes Theorem ==>  P(E/A)= P(E)*P(A/E)/P(T)
+
+## Linear Regression ==> relations between two variable similar as a line. and one can be find out on the basis of other.
+
+Using least square method.
+
+Using Gradient Descent.
+
+##  Measuring regression error using r_value square ==> tells variation of y captured by model.
+
+## R square ==> gives values between 0 to 1.
+
+## Calculating values ==>
+
+slope,intercept,r_value,p_value,std_err = stats.linregress(x,y)
+
+
+## Printing a Line using x,y data and matplotlib ==>
+
+plt.show(plt.plot(x,slope*x+intercept))
+
+
+## Polynomial Regression ==> higher order regression.
+
+import numpy as np
+import pandas as pd 
+import matplotlib.pyplot as plt 
+import scipy.stats as sp 
+from numpy import random
+
+x=np.random.normal(3,1,1000)
+y=np.random.normal(50,10,1000)/x
+p4=np.poly1d(np.polyfit(x,y,4))
+xp=np.linspace(0,7,100)
+plt.scatter(x,y)
+plt.plot(xp,p4(xp),c='r')
+plt.show()
+
+
+## R-Square Error in Non Linear Regression ==>
+
+from sklearn.metrics import r2_square
+
+r2=r2_square(y,p4(xp))
+
+
+## Multivariate Regression ==> relation between more than 2 variables. ex ==> x= y*z
+
+## Reading Excel file ==> pd.read_excel(path).
+
+## Normalizing Values between -1 to 1 for a given data. 
+
+x[['column1','column2','column3']] = scale.fit_transform(x[['column1','column2','column3']].as_matrix())
+
+## Creating Ordinally Least Squared Models==>
+
+model=sm.ols(x,y).fit()
+
+model.summary()
+
+## Multivariation Regression using statsmodel package ==>
+
+import statsmodel.api as sm
+from sklearn.preprocessing import StandardScaler
+scale=StandardScaler()
+
+x=pd.read_excel(path)
+y=pd.read_excel(path)
+
+x[['column1','column2','column3']] = scale.fit_transform(x[['column1','column2','column3']].as_matrix())
+model=sm.ols(x,y).fit()
+
+model.summary()
+
+
+## Printing y values mean with grouping of x['column'] ==>
+
+print(y.groupby(x['column']).mean())
+
+
+## Multi Level Model ==> relation of x to different variables occurs in different levels. Example ==> compound functions.
+
+
+## Machine Learning ==> Algos learn from observational data and make predictions.
+
+1) Supervised ML==> model trained with data and pre declared results for new results. acomplished by training and testing set,k-cross validation.
+
+2) Unsupervised ML ==> model trained with data only and find results as latent variable.
+
+

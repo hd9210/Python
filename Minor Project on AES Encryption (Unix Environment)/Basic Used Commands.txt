@@ -1,0 +1,6 @@
+
+cd Downloads
+
+python3 script.py
+python3 processes.py
+"/home/himanshu/Downloads/information.txt"

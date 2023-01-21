@@ -1,0 +1,211 @@
+strace: Process 3611 attached
+read(0, "921064\n", 1024)               = 7
+openat(AT_FDCWD, "data.txt.enc", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=32, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=32, ...}) = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=32, ...}) = 0
+read(3, "\344,\252\276t\24l\214m\272\263\342\360\341+P\215\371\347hE\303\307\315\2744~\325}\224\344r", 4096) = 32
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "data.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+write(3, "921064", 6)                   = 6
+close(3)                                = 0
+unlink("data.txt.enc")                  = 0
+openat(AT_FDCWD, "data.txt", O_RDONLY)  = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=6, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=6, ...}) = 0
+read(3, "921064", 8192)                 = 6
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "data.txt", O_RDONLY)  = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=6, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=6, ...}) = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=6, ...}) = 0
+read(3, "921064", 4096)                 = 6
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/dev/urandom", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}) = 0
+fstat(3, {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}) = 0
+read(3, "\n\200\326#S\306\210\267^K\10\337.>-\317", 16) = 16
+read(3, "\330\230\212\210\262\207-~\16\265\267X\354\263\206M", 16) = 16
+getpid()                                = 3611
+read(3, "<o\200\300\3374\1\307\315\275\200*\344\325\334\26J\3132\360\226\314\202\245\224\215G\250Qm\10\242"..., 1024) = 1024
+read(3, ";M:\34\211,\365\251\216[\363\37\275UH\322L\203V\357O7\326\224z\250\206\363l\265\371/"..., 1024) = 1024
+read(3, "yl\213rR\337\222\255", 8)      = 8
+getpid()                                = 3611
+openat(AT_FDCWD, "data.txt.enc", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+write(4, "\337\330\320-\257\246\265\327\371\271o\16\272a\203\212\372\6\v=\374(\304Q\327\343\333`\233M\5\301", 32) = 32
+close(4)                                = 0
+unlink("data.txt")                      = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+mmap(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fa46ed2f000
+rt_sigprocmask(SIG_BLOCK, ~[], [CHLD], 8) = 0
+clone(child_stack=0x7fa46ed37ff0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 3620
+munmap(0x7fa46ed2f000, 36864)           = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+wait4(3620, [{WIFEXITED(s) && WEXITSTATUS(s) == 127}], 0, NULL) = 3620
+rt_sigaction(SIGINT, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3620, si_uid=1000, si_status=127, si_utime=0, si_stime=0} ---
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+write(2, "1. Press '1' to encrypt file.\n2."..., 186) = 186
+read(0, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+read(0, "1\n", 1024)                    = 2
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+mmap(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fa46ed2f000
+rt_sigprocmask(SIG_BLOCK, ~[], [CHLD], 8) = 0
+clone(child_stack=0x7fa46ed37ff0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 3642
+munmap(0x7fa46ed2f000, 36864)           = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+wait4(3642, [{WIFEXITED(s) && WEXITSTATUS(s) == 127}], 0, NULL) = 3642
+rt_sigaction(SIGINT, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3642, si_uid=1000, si_status=127, si_utime=0, si_stime=0} ---
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+write(2, "Enter name of file to encrypt: ", 31) = 31
+read(0, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+read(0, "\"/home/himanshu/Downloads/inform"..., 1024) = 43
+openat(AT_FDCWD, "/home/himanshu/Downloads/information.txt", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1193, ...}) = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=1193, ...}) = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=1193, ...}) = 0
+read(4, "\r\n\r\npassword zip\r\n\r\nzip --passwo"..., 4096) = 1193
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+read(3, "dky\22\3770\t\352", 8)         = 8
+getpid()                                = 3611
+openat(AT_FDCWD, "/home/himanshu/Downloads/information.txt.enc", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+write(4, "\240\322\252\307\251\363\202\326O\343\256\32\256>\5\236\341s\312G\354y=\n\"\3\366\0314\206\20\237"..., 1216) = 1216
+close(4)                                = 0
+unlink("/home/himanshu/Downloads/information.txt") = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+mmap(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fa46ed2f000
+rt_sigprocmask(SIG_BLOCK, ~[], [CHLD], 8) = 0
+clone(child_stack=0x7fa46ed37ff0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 3649
+munmap(0x7fa46ed2f000, 36864)           = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+wait4(3649, [{WIFEXITED(s) && WEXITSTATUS(s) == 127}], 0, NULL) = 3649
+rt_sigaction(SIGINT, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3649, si_uid=1000, si_status=127, si_utime=0, si_stime=0} ---
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+write(2, "1. Press '1' to encrypt file.\n2."..., 186) = 186
+read(0, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+read(0, "5\n", 1024)                    = 2
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+mmap(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fa46ed2f000
+rt_sigprocmask(SIG_BLOCK, ~[], [CHLD], 8) = 0
+clone(child_stack=0x7fa46ed37ff0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 3662
+munmap(0x7fa46ed2f000, 36864)           = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+wait4(3662, [{WIFEXITED(s) && WEXITSTATUS(s) == 127}], 0, NULL) = 3662
+rt_sigaction(SIGINT, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3662, si_uid=1000, si_status=127, si_utime=0, si_stime=0} ---
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, {sa_handler=0x55edcae648a0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa46f3e7800}, 8) = 0
+close(3)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
+
+
+
+
+
+
+
+
+
+
+
+
+
+

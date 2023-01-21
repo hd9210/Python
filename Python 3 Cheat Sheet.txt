@@ -1,0 +1,2048 @@
+python 3 - Guido van Russom (2008) do not support python 2 backward compatible.
+Now python 3 is fully developed as python 2.
+
+1) cmd command for python version - python
+
+##using git bash with visual studio code
+
+1) open VSC and open file=>prefrences=>settings and then setting.json
+and paste 
+"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+and save
+2) press ctrl+tilde
+select bash.
+
+
+git bash uses all linux commands
+1)   Print current directory => pwd
+2)   list directory data => ls directory path
+3)   clear screen => clear
+4)   change directory => cd Drive://
+5)   make directory => mkdir "path/folder name" (to give spaces between words use " " )
+6)   making many directory => mkdir folder1 folder2 folder3
+7)   changing folder => cd Drive://directory/Sub Directory
+8)   Creating File => touch path-to-file/filename.type  //hello.txt , hello.py , hello.java
+9)   Going back => cd ..
+10)  Changing to spaced folders => cd "Drive://Directory/Sub Directory"
+11)  Removing File => rm "Drive://path/filename.type"
+12)  Removing Folder => rm -rf "path-to-folder" (rf= recursive force)
+13)  Renaming File => mv "path-to-file/filename.type" "path to rename file/new_name.type"
+14)  Moving Files  => mv "path-to-file/filename.type" "new_path to file"
+15)  Moving files to current subdirectory => mv "path-to-file/filename.type" "./new path"
+16)  Moving file back to folder =>mv "path-to-file/filename.type" ..
+17)  copy files => cp "path-to-file/filename.type" "path to copy file/"
+
+ 
+ VSC(in terminal)
+
+1) To open/Create and Code a file => code "path-to-file/filename.type"
+2) Run => python "path-to-file/filename.py"
+
+## Print() Function => print('string') //print("string")
+
+you can use double qoutes under single quotes or vice versa.
+But you cant use single quotes inside single quotes or you cant use double quotes inside double quotes.
+
+ex- print(" hello "hello world" world ") || print(' hello 'hello world' world ') ==> error
+
+
+## Escape-Sequence
+Use to remove double quotes single quote error in nesting.
+
+ex -   print(" hello \"hello world\" world ") || print(' hello \'hello world\' world ')
+
+1.  New line ==> print( "hello\nworld")
+
+2.  Tab ==>   print ('hello \t world ')
+
+3.  Backslash ==> use (\\)  ==> print(" hello world\\") or print(" hello world\\\\") double backslash
+
+4.  To remove one charater in print ==> print(" Hell\blo world ")
+
+
+
+## Comments 
+increase readability and cant be processed by Compiler.
+
+Ex => print('name') # Enter your name 
+you can use # or Ctrl+/ and line will be commented.
+
+
+## Escape Sequences as Output
+
+1) Use \\ in case of \. ==> print("hello \\n world ")
+
+Exceptions ==> print(" \\\" \\\' ") ==>output= \" \'    [ '\ = \ and \\ = \ ]
+
+2) use ==> print(r" string1 \n string2 ")
+
+
+
+
+
+Excercise 
+
+1) this is \\ double backslash
+
+ print(' this is \\\\ double backslash ")
+
+2) this is /\/\/\/\/\ mountain
+
+print(" this is /\\/\\/\\/\\/\\ mountain ")
+
+3) he is      awesome 
+
+print('he is \tawesome ')
+
+4) \" \n \t \'
+
+print(" \\\" \\n \\t \\\')
+
+
+
+## Print Emoji
+ 
+print("\U000Unicode")
+
+
+## Print as Calculator
+
+1) Sum ==> print(2+3)
+2) Sub ==> print(3.5-6.7)
+3) Float Divide ==> print(2/4) ==> 0.5
+4) Integer Divide ==> print ( 2//4) ==0
+5) Modulo Division ==> print( 2%4) ==>5
+6) Exponent ==> print(2**4) ==> 16
+7) Square Root ==> print( 2**0.5)
+8) Rounding of number ==> print(round(2**.5,4))
+
+
+##  Precedence Rule                  Associativity
+1)    ()                               Highest
+2)    **                             Right To Left
+3)  /,//,%,*                         Left to right
+4)   -,+                             Left to right
+
+
+
+## Variables 
+   Named Memory to store data is known as varibles.
+ Ex=> 
+          number=10
+          print(number)
+1) name = "himanshu" || 'himanshu'
+2) no=5.8
+3) name , age = "Him" ,20
+4) x=y=z=10
+
+
+Dynamic Programming ==> changing of data format of a variable on runtime is known as Dynamic Programming. Ex-> no=5 and then no="no"
+
+
+## Variable Naming Rules
+
+1) Varible cant start with number. ex 123Ham
+2) Variable can be started with any letter or _ .
+3) Can not use special symbols in variable. Ex => name% ,$dl
+
+Naming Convention ==> Use snake case writing ( name_of_parent ="xyz") --> used in python
+                  ==> Use Camel Case Writing ( nameOfParent ='xyz')  --> used in java 
+
+
+## Strings
+
+collection of characters inside "" or ''.
+
+operations on Strings -->
+1) Concatenation ==> string3= string1 + string2 ||string3= string1 + "3"||string3= string1 + string(3)|| to give space in between string3= string1 + " " string2
+2) Multiplication of same string ==> print(sring*3) ==> repeat string 3 times.
+3) Indexing --> Assigning location values to string elements.
+     ex --> print(name[5])   you can use [-ve] indexing also.
+
+4) Slicing / Selecting String Sub Sequences
+   
+   print(string_name[start : end ]) --> Start is included and end is excluded.   
+   print(string[:]) --> print full string.
+
+5) Stepping ==> print(string_name[start : end : step])
+
+## Input() Function
+   syntax ==> name=input("type your name")  *Note => It always takes input as String. ex 24 == "24"
+              name,age=input("enter your name and age").split("")||split(",")
+## Int() Function
+   Used to convert string values to Numeric so that Arithmatic Operations can be performed.
+   Syntax => number1= int(input(" Enter first number ") )
+
+## Float() Function
+   Used to convert values to Float so that Arithmatic Operations can be performed.
+   Syntax => number1= float(input(" Enter first number ") )
+
+## Str() Function
+   Used to convert numeric values to string so that Arithmatic Operations can be performed.
+   Syntax => name= "himanshu" + str(13)
+
+Note --> float + int = float
+
+
+
+##  String Fomrmatting 
+    Used to increase print and read quality.
+1)  print(" My name is {} and age is {}".format(name,age)) --> Python 3
+2)  print(f" My name is {name} and age is {age} ")||print(f" My name is {name+" dixit"} and age is {age+4} ")  --> python 3.x
+
+
+##  String Methods
+
+1) len() ==> print(len("string/string_variable")) --> count spaces also (function)
+
+2) upper() ==> print(string.upper()) -->convert all characters in Capitals (Method)
+
+3) lower() ==> print(string.lower()) --> convert all characters in small alphabet (Method)
+
+4) title() ==> print(string.title()) --> First is capital and other are small (Method)
+
+5) count() ==> print(string.count("character/sub_string_to_be_count")) --> returns Int value (case sensitive)
+
+
+##  Strip() Method 
+  use to remove spaces after or before a string.
+
+1) print(string.lstrip()) --> remove spaces before string.
+2) print(string.rstrip()) --> remove spaces after string.
+3) print(string.strip()) --> remove spaces before and after of a string.
+
+
+##  Replace() Method
+    Replaces the selected character to specified character in only output of a string.
+    Syntax ==> print(string.replace("h","t",v) --> only changes reflected in output of the string. --> replaces h to t till v occurrence of h.
+
+##  Find() Method
+    Used to find position of character or substring in string and it returns integer value.
+   syntax ---> print(string.find("am",loc)) ---> find "am" after location given.
+
+##  Strings are immutable --> only over writing is allowed but you cant modify string elements using indexing.
+
+##  Random Number Generating
+    Syntax ==>
+    import random
+    for x in range(Y)
+    print random.randint(P,Q) --> print Y random numbers between P and Q-1.
+  
+
+## Excercise
+
+1) Take two comma separated input from user and print first string length and count characters input by user in case insensitive mode.
+
+  string1,string2=input(" Enter a name and a character").split(",")
+  print(f"The length of string 1 is {len(string1)} ")
+  print(f" output is {string1.lower().count(string2.lower())} " )
+
+
+
+Excercise 
+
+1) Find and print Average of 3 no on user based data.
+
+     num1,num2,num3=input(" Enter three numbers ").split(" ")
+     avg=(int(num1)+int(num2)+int(num3))/3
+     print(f" Average of numbers is : {avg} ")
+
+
+##  Conditional Statements 
+
+1) If statement 
+                syntax--> if condition:
+                                    code_here     *Note==> indentation is must to specify if code area.
+
+2) Pass statement -->
+                     if you dont want to do anything in a block just type pass.
+
+3) Else Statement -->
+             always written after If statement.
+    syntax ==> else :
+                        code_here  *Note indentation is must and previous if statement is must.
+
+4) Nested If-else ==> 
+    syntax ===>
+                 if condition :
+                    code_here
+                 else :
+                     if condition :
+                        code_here
+                     else:
+                        code_here
+
+5) Anding and Oring in conditions --> syntax ==> if x>=y and y>=z :, if name="him" or rollno==12 :
+
+6) Elif Ladder ==>   if  condition :
+                         code_here
+                     elif condition :
+                         code_here
+                     else
+                         code_here                      
+
+##  Excercise to guess a random number .
+    
+    import random
+    a=random.randint(1,101)
+    b=int(input("Enter a random number"))
+    if a==b:
+            print(" You Win ! ")
+    else :
+           print(" You loose ")
+
+##  In Keyword
+    to check a character
+    syntax ==> if "substring/char" in "string" :
+                   code_here
+
+
+
+##  To check empty or not
+
+    syntax ==>   if string :
+                     code_here  (string is not Null)
+                 else
+                     code_here  (string empty)   
+
+##  While Loop
+   
+    Syntax ==>  i = 1   (intialization)
+                while condition :
+                    code_here
+                i+=1  ==> incrementation
+
+##  Sum of Natural Numbers Using while
+
+n=int(input("Enter natural Number range "))
+sum=0
+i=1
+while i<=n:
+     sum = sum+i
+     i=i+1
+print(f"sum is {sum} ")
+
+
+
+##  Excercise
+    print sum of digits of a number.
+no=input(" enter number ")
+i=0
+sum=0
+while i<len(no):
+    sum=sum+int(no[i])
+    i=i+1
+print(f"the sum is {sum} "}
+
+
+
+##  Excercise
+    printing all characters count in a name without repetition.
+
+name=input("enter name ")
+temp=""
+i=0
+while i<len(name):
+    if name[i] not in temp :
+        temp+=name[i]
+        print(f" The characters {name[i]} is {name.count(name[i])} times ")
+    i=i+1
+
+
+##  Infinte Loops
+    Never stops.   syntax ==> i=1
+                              while i: || while True:              True--> Boolean
+                                 print(" Hello World ")   --> stop press ctrl+c
+
+
+## For Loop
+
+ syntax ==>  for i in range(x)||range(x,y)||range(x,y,z):     ---> i<x || i=x to y-1  || i=x to i=y-1 and i=i+z
+                 code_here
+
+
+## Sum of N numbers using For loop
+
+tot=0
+no=input(" enter digit ")
+for i in range(0,len(no)):
+    tot=tot+int(no[i])
+print(f"the sum is {tot} ")
+
+
+
+##  Excercise
+    printing all characters count in a name without repetition.
+
+name=input(" enter name ")
+temp=""
+for i in range(0,len(name)):
+    if name[i] not in temp :
+        temp+=name[i]
+        print(f" The characters {name[i]} is {name.count(name[i])} times ")
+    i=i+1
+
+
+## Break and Continue Keyword
+
+1) Break --> exit from loop
+2) continue --> skip from loop
+
+
+
+##  Number Guessing
+
+import random
+no=random.randint(0,100)
+num=""
+i=0
+while no!=num:
+    i=i+1
+    num=int(input(" Enter a number to guess "))
+    if num>no:print("too high")
+    elif num<no: print("too low")
+    else:print(f"you found the number in {i}th guess")
+
+
+##  Odd Number
+    for i in range(1,10,2):
+        print(i)
+
+
+##  Even Number
+    for i in range(0,10,2):
+        print(i)
+
+
+##  Reading string using For
+    
+   syntax ==> for i in string||"string" :
+                 code_here
+
+
+
+##    Print vs Return ==> print -> print the data and return->return data value to a specific slot or variable.
+
+
+
+##    Functions ==> a block or code used to reduce complexity and increase readability.
+      Syntax==>
+                 def function_name(arg1,arg2,arg3......):
+                     code_here
+                      return(code_here)
+ 
+     Function Call ---> funtion_name(values)
+     *Note--> Function should be defined at the top most then can be called.
+
+
+
+##    Function to print last character of a string
+def last(a):
+    return a[-1]
+a=input("enter a name ")
+print(f"the last character of name is : {last(a)}")
+
+
+
+##   Odd and Even Function
+
+def odd(n):
+    if n%2!=0:print(" Number is odd ")
+    else: print("number is even ")
+
+n=int(input("enter a number "))
+odd(n)
+
+
+
+##  iseven()
+
+   def iseven(n):
+       return n%2==0
+   n=int(input(" enter number ")
+    iseven(n)
+
+##  ispalindrome()
+
+   def ispalindrome(string):
+       return string==string[::-1]
+
+    string=input(" enter a string " )
+    print(f" the string is palindrome {ispalindrome(string)} ")
+
+
+
+##    Default Parameters ==> predefined values of arguments in function defination and can be overwritten.
+
+      syntax==>   def func( value1 , value2 ,........,valuek=default value ,valuek1=default value,.........valuen=default value)
+      Rules ==> all values shoul be default from right to left last default value.
+
+
+
+##   Variable Scope ==>
+
+1) Local variable ==> defined inside a block or functions.
+2) Global Variable ==> defined outside of all functions.
+
+ex==>
+x=8
+def xi():
+    global x
+    print(x)
+
+print(x)
+
+
+
+##   List ==> is ordered collection of data items which can store int,char ,float.
+
+      syntax ===> num=[1,2,3,4,5....n]
+                  name=[him,wim,dim,.....]
+                  mix=[1.3,4.5,1,5,7,8,him,wim,None]
+1) Accessing data with index ==> print(num[i])
+    Note==> List are mutable.  num[i]=num[i+1]
+
+2) Replace all elements in list after a suitable index.  ==> num[i:]="value"||string|| [ value,value]
+
+3) Appending list ==>list_name=[] 
+                     list_name.append("argument"||another_whole_list) ==> list inside list. 
+
+4) At any position. ==> list_name.insert(index,value)
+
+5) Adding two list. ==> list3 = list1 + list2
+
+6) Extending and adding a list to another list. ==> list1.extend(list2)  ===> list1 = list1 + list2
+
+7) Deleting data from list. ==> list.pop( ) --> removes last element
+                            ==> list.pop(index)  ==> also returns integral value of popped item.
+
+8) Delete using delete operator. ==> del list[index]
+
+9) Remove method to remove unknown element from list.  ==> list.remove("value")
+
+10) Finding an element in list.   ==> if value in list : code_here
+
+11) counting a value in list.   ==> list.count(value)
+
+12) sorting a list using method.  ==> list.sort()    ## tim sort method
+
+13) Only Print sorted list using sorting function. ==> print(sorted(list))
+
+14) Clear Method to delete all element of a list.==>   list.clear()
+
+15) Making copy of list.   copy_list=list.copy()
+
+16) Split Method with list. ==> list="1 2 3 4 5 6 7 8".split(" ") --->list=['1','2','3','4','5','6','7','8']
+
+17) Join method in list of strings only. ==> ",".join(list_name) ==> join all element of list into string.
+
+18) List using range function.   lis=list(range(x,y)) --> list will contain x to y-1 elements.
+
+19) Index Method() to find index of an element. ==> lis.index(x,y,z) ===> find yth value between x and z index.
+
+20) min() and max() functions to find min and max from list. syntax ==> max(list) and min(list)
+
+##   Is vs '=='
+
+1) Is operator used to check weather two data having same memory location or not.
+2) == used to check equivalence of values of variables.
+
+
+## Type() method ==> type(variable) ===> returns data type of variable
+
+
+##    Excercise 
+      To print sqaure of a list using function.
+      syntax==>
+
+def sq(l):
+    dis=[]
+    for i in l:
+        dis.append(int(i)**2)
+    return dis
+n=input("input a list separated by space ")
+lis=n.split(" ")
+print(sq(lis))
+
+
+##    Revesing a list using pop() and append().
+
+def rev(l):
+    dis=[]
+    for i in range(len(l)):
+        temp=l.pop()
+        dis.append(temp)
+    return dis
+
+n=input(" enter a list space separated ")
+lis=n.split(" ")
+print(rev(lis))
+
+
+
+##  Printing reverse of all elements of a list.
+
+def rev(l):
+    dis=[]
+    for i in l:
+        temp=i
+        temp=temp[::-1]
+        dis.append(temp)
+    return dis
+
+n=input(" enter a list space separated ")
+lis=n.split(" ")
+print(rev(lis))
+
+
+
+##   Printing odd and even numbers from list.
+
+def rev(l):
+    even=[]
+    odd=[]
+    for i in l:
+        if int(i)%2==0:even.append(int(i))
+        else:odd.append(int(i))
+    return(f" the even number in list are : {even} and the odd numberss in the list are : {odd}")
+        
+
+n=input(" enter a list space separated ")
+lis=n.split(" ")
+print(rev(lis))
+
+
+
+##  Printing common elements of two lists.
+
+def rev(l,m):
+    com=[]
+    for i in l:
+        for j in m:
+            if i==j and i not in com:com.append(i)
+    return(f" the common elements in lists are : {com} ")
+        
+
+n=input(" enter a list space separated ")
+lis=n.split(" ")
+n=input(" Again enter a list space separated ")
+dis=n.split(" ")
+print(rev(lis,dis))
+
+
+##  Counting list inside a list.
+
+def rev(l):
+    c=0
+    for i in l:
+        if type(i)==list:c=c+1
+    return(f" the Numbers lists in side list is : {c} ")
+        
+lis=[[1,2],[3,4],5,6,7,8]
+print(rev(lis))
+
+
+##  Tuples ==> data structure and store any kind of data but tuple are immutable. no pop() no remove() no updatation and faster than list.
+    syntax --> tuple=(' ' , ' ' , ' ' , ' ' )
+
+    Methods in tuples.
+
+1) count
+
+2) index and slicing
+
+3) len()
+ 
+4) looping in tuple. syntax ==> for i in tuple: code_here
+
+5) tuple with one element --> tuple=("element",)
+
+6) tuple without parenthesis. --> tuple = 'ele','ele1'
+
+7) tuple unpacking --> value1,value2,value3,......= tuple(ele1,ele2,ele3,....) ==> no of elements must be same as no of values.
+
+8) list inside tuple. syntax ==> tuple=(ele1,list,ele2) and you can update list inside a tuple.ex append() pop() etc
+
+9) min() , max() and sum() functions.
+
+10) tuple creation using range function. syntax = tuple(range(x,z)) 
+
+11) Tuple as list. syntax list= list(tuple)
+
+12) Tuple to string. syntax ==> string = "".join(tuple) or string = str(tuple)
+
+*Note ==> function can return values as tuple. syntax ==> print(func(arg1,arg2)) --> if returning two values
+
+
+##  Dictionaries
+    More realstic unordered collection of data with key:value pair. Syntax ==>  dict={ 'key1': value1,
+                                                                                       'key2': value2,
+                                                                                                   ....}
+
+1) Creating dictionary using dict() method. syntax ==> dicti= dict(name='him',age=21) || dict(list_of_tuple_pair) ex--> [ ('a' , 2) , ('b',4) ]
+
+2) Indexing in dictionary. --> print(dictionary['key1'])
+
+3) Filling empty dictionary. syntax ==> dict={}
+                                        dict['key1']=value1
+
+4) checking keys in dictionary.  syntax ==> if key in dictionary_name : code_here   --> only check keys.
+
+5) For values use values() method. syntax ==> if value||list||tuple in dictionary_name.values() : code_here
+
+6) Looping in dictionary. syntax ==> for i in dictionary_name: print(i) --> print all keys.
+
+7) Looping in dictionary. syntax ==> for i in dictionary_name.values: print(i) --> print all values.
+
+8) Values() method. syntax --> dis=dict.values will show dis as list but it is type of dict_values.
+
+9) Keys() method. syntax -->  dis=dict.keys will show dis as list but it it a type of dict_keys.
+
+10) Items() method. Syntax ==> dis=dict.items() will store all key,pair in tuple and type is of dict_items.
+
+11) Printing keys and values together using items() method. syntax --> dis=dict.items() 
+                                                                         for i , j in dis:
+                                                                             print(i,j)
+12) Pop() method data in dictionary. syntax ==> dict.pop(key) --> remove and return value of that key.
+
+13) Update() method to adding a dictionary to another dictionary and same keys are overwritten. syntax ==> dict1.update(dict2)
+
+14) Blank update. syntax ==> dict.update({}).
+
+15) Fromkeys() method to create dictionary keys having same values. syntax ==> dictionary_name = dict.fromkeys( ['key1','key2','key3',...] , 'values_for_all_key' )
+                                                                                                 dict.fromkeys( ('key1','key2','key3',...) , 'values_for_all_key' )
+                                                                                                 dict.fromkeys( ["string_of_all_keys"||range(x,y)] , 'values_for_all_key' )
+
+16) get() method to access a value or key. syntax ==> dict.get(key)||dict.get(key,"not found")
+
+17) clear() method to empty to dictionary. syntax dict.clear()
+
+18) copy() method to copy dictionary to different dictionary. syntax ==> dict.copy()
+
+
+##  Excercise
+
+1) Word Counter
+
+def wc(n):
+    d={}
+    for i in range(len(n)):
+        d[n[i]]=n.count(n[i])
+    return d
+    
+n=input(" enter a word ")
+print(wc(n))
+
+
+##  Creating a dictionary on user basis.
+
+d={}
+ch='y'
+while ch == 'Y' or ch == 'y':
+    k,v=input(" Enter key and value to add in dictionary ").split(" ")
+    d[k]=v
+    ch=input(" Do you want to add more values into dictionary (Y/N) ")
+for i in d.items():
+    print(f"{i}")
+
+
+
+
+##  Set --> unordered collection of elements without any key and repetition is removed and so always have unique items.Can't store list tuple dictionary inside a set
+
+1) To remove duplicate from a list or tuple. syntax --> list(set(list_name)) tuple(set(tuple))
+
+2) Adding element to set. syntax --> s.add(element)
+
+3) Remove element from a set. syntax --> s.remove(element)
+
+4) Discard method . syntax --> s.discard(element)
+
+5) clear() method . syntax --> s.clear()
+
+6) Finding an element . Syntax --> for 'value' in s: code_here
+
+7) Set math operations. Union : s= s1 | s2    Intersection: s= s1 & s2
+
+8) copy() method . Syntax --> q=s.copy()
+
+ 
+
+
+##   List Comprehension --> syntax ==> list_name = [append_value for i in range(x,y)||list ]
+
+     List Comprehension with if statement. syntax --> list_name = [ append_value for i in range(x,y) if condition ]
+
+     List Comprehension with if-else statement. syntax --> list_name = [ append_value1 if condition else append_value2 for i in range(x,y) if condition ]
+      
+     Nested List . syntax --> lis=[ [i for in range(x,y)] for j in range(x2,y2) ]
+
+##   Excercise 
+
+1) To print reverse of list using comprehension. 
+
+def rev(l):
+    d=[i[::-1] for i in l]
+    return d
+
+lis=input(" enter a list ").split(" ")
+print(rev(lis))
+
+
+## Dictionary Comprehension --> syntax ==> dict_name = {key:value for key in range(x,y) }
+ 
+                                           dict_name = {f" {key}: {( value1 if condition else value2 ) } " for key in range(x,y) }
+
+
+
+## Set Comprehension --> syntax ==>  s = { value for k in range(x,y) }
+
+
+
+##   *operator / *args --> to remove argument operator error in functions. 
+
+  syntax --> func_name(*args || () ) -->take any number of agruments 0 also and args is of tuple type.
+
+  syntax --> func_name(normal_arguments,*args) --> normal_argument does not count as tuple and 1 agrument must provided for normal_arguments.
+                                 
+  syntax error --> func_name(*args,normal_argument)
+
+  syntax --> func_name(*list) --> list passing and unpacking list elements in function_call.
+
+
+##  Excercise --> To print pth power of list using *args and list comprehension.
+
+import random
+def f(num,*args):
+   l=[int(i)**num for i in args]
+   return l
+
+n=input(" enter list of numbers ").split(" ")
+p=random.randint(1,5)
+print(f(p,*n))
+
+
+##  **operator / kwargs operators / keyword argument operator ==> takes any arguments in input of function to create dictionary.
+
+  syntax --> func_name('name'=himanshu , 'age' = 21) || func_name(**dict) --> call
+             func_name(**kwargs) --> input to dictionary.
+             print(kwargs)
+
+## Excercise ==> To print title of reverse order of list elements using function and **kwargs.
+
+def f(l,**args):
+         p=[i[::-1].title() if 'reverse_str' in args.values()  else  i.title()  for i in l ] 
+         return p
+print(f(['him','wim','gim'])
+print(f(['him','wim','gim'] ,d='reverse_str'))
+
+
+##   Lamda Expression or Anonymous function ==> function without name. syntax --> lambda arg1,arg2,..... : code_here 
+                                                                       func_name = lambda arg1,arg2,..... : code_here
+                                                                       func_name = lambda arg : value1 if condition else value2
+
+
+##  Position tracking of iterable using enumerate() function. syntax ==> for pos,value in enumerate( list||tuple ) : code_here
+
+
+##  Excercise to print position of a string in list using enumerate().
+
+def f(l,s):
+    for i,j in enumerate(l):
+        if s==j:return(i)
+    return -1
+
+n=input(" enter a list ").split(" ")
+s=input(" enter a string ")
+print(f(n,s))
+
+
+
+##  For loop Functioning and iterator -->
+    
+    for i in list,tuple : code_here
+  
+Steps =>
+
+1) iter() function called to make list,tuple as iter object. iter(tuple || list )
+
+2) next(iter_object) --> return a value from iter_object.
+
+
+##  Iterator --> iterable only once and type of iter object. Ex -> map() , filter()
+
+##  Iterables --> can be iterated number of times . Ex -> string , list , tuple
+
+
+##  Map() Function --> maps values from list to function in loop and return a map object and can be converted to list() or tuple().
+
+syntax --> list1 = list( map ( (lambda list2 : code_here) || function_name , list2))
+
+n=input(" enter a values").split(" ")
+f=list(map(lambda n: int(n)**3, n))
+print(f)
+
+
+## Filter() function --> filter values from iterable and return them as filter object and can be converted to list || tuple.
+
+syntax --> list1= list( filter ( lambda list2: code_here ) || function name , list2) )
+
+n=input(" enter a values").split(" ")
+even =list(filter(lambda n:int(n)%2==0 ,n))
+odd = list(filter(lambda n:int(n)%2 != 0 , n))
+print(f"{even},\n {odd}")
+
+
+## Zip() function --> use to zip two lists together and zip corressponding values into a tuple-pair can be stored into a list || tuple.
+                      but it returns iterator. Maximum pairing done on the basis of minimum length list.
+
+n=input(" enter  values ").split(" ")
+s=input(" enter  values ").split(" ")
+f=dict(zip(n,s))
+print(f)
+
+##  *operator with zip() to unpack tuple pair list into single list. syntax ==> list1= list( zip( list_tuple_pair ) )
+
+n=input(" enter  values ").split(" ")
+s=input(" enter  values ").split(" ")
+f=list(zip(n,s))
+n,s=list(zip(*f))  # Unpacking of list_tuple_pair.
+print(n,s)
+
+
+## Finding maximum of three list_tuple_pair.
+
+f=[(1,2,3),(11,5,10),(5,7,9)]
+for i in f:print(max(i))
+
+
+##  Finding Average using Anonymous Function
+
+l1=[1,2,3,4,5,6]
+l2=[8,7,6,5,4,3]
+l3=[2,8,9,0,6,4]
+avg = lambda *args : [ sum(i)/len(i) for i in zip(*args) ]
+print(avg(l1,l2,l3))
+
+
+##   All() function --> returns true if all value passed to it is true.
+
+##   Any() function --> returns true if any value passed to it is true.
+
+syntax -->
+
+l=[2,4,6,8,10]
+print(all([i%2==0 for i in l]))
+
+
+## Printing Highest aged person from a List of Dictionaries.
+
+n=[{'name':'him','age':21},
+   {'name':'kim','age':24},
+   {'name':'rim','age':25},
+   {'name':'pim','age':26} ]
+
+print(max( n , key = lambda n : n.get('age'))['name'])
+
+
+
+n= { 'him':{'age':21},
+   'kim':{'age':24},
+   'rim':{'age':25},
+   'pim':{'age':26} }
+
+print(max( n , key = lambda i : n[i].get('age')))
+
+
+##  Doc strings --> metadata of a function. syntax --> func(): ''' doc string '''
+                                                       print(func.__doc__)
+                                                       print(help(func))
+
+## Printing real name of variable --> print(var.__name__)
+
+
+##  Decorators -->
+
+1) var as function alias (closure). syntax f=func  --> f and func() both are same and you can call f() as func(). 
+
+2) Function as argument. syntax --> def add(x,y):return(x+y)
+                                    def cal(func,a,b):
+                                            return(add(a,b))
+
+                                     print(cal(add,3,5))
+
+
+3) Function returning function.
+
+def add(a,b):return(int(a)+int(b))
+def sub(a,b):return(int(a)-int(b))
+def mul(a,b):return(int(a)*int(b))
+def div(a,b):return(int(a)/int(b))
+def cal(n,a,b):
+    if n==1: return(add(a,b))
+    elif n==2: return(sub(a,b))
+    elif n==3: return(mul(a,b))
+    else:return(div(a,b))
+
+print((3,2,3))
+
+
+4) 
+
+def o(x):
+    def i(n): return n**x
+    return i
+
+var = o(3)
+print(var(2))
+
+
+ 
+##   Decorators ==> it is a function increase the functionality and readability of functions. syntax @deco_fun: func()
+from functools import wraps   ##to remove error of returning of none by wrapper function.
+def deco(var):
+    @wraps(var)
+    def wrap(x,y):
+        print(" this is substraction ")
+        print(var(x,y))
+    return wrap
+
+@deco
+def sub(a,b):return(a-b)
+sub(3,4)
+
+
+
+##   Calculating Time of function or code using time package and decorators.
+
+from functools import wraps
+import time
+t1=time.time()
+def deco(var):
+    @wraps(var)
+    def wrap(x,y):
+        print(f" You are calling {var.__name__} function. ")
+        print(var(x,y))
+    return wrap
+t2=time.time()
+@deco
+def add(a,b):
+    ''' Pass two numbers two add '''
+    return(a+b)
+add(3,4)
+print(t2-t1)
+
+
+
+
+##    Generators ==> sequence like list and tuple but it is a iterator not iterable. Generators generates memory for each element at the time of calling only.Not store whole as list.
+
+
+##  Generator function with yield keyword
+
+def cube(n):
+    for i in range(1,n+1):yield i**3
+
+for cube in cube(5):
+    print(cube)
+
+
+
+##  Generator Comprehension ==> syntax ==> gen = ( value for in range(x,y))
+
+
+##  OOp
+
+##  Class declaration
+
+class classname:
+        class_variable = value
+        def __init__(self,attr1,attr2,attr3,attr4,....):         # Constructor
+              self.attr1 = value1
+              self.attr2 = value2
+        def class_method(self,attr1,atr2....):                   # Class method()
+              return classname || self.class_variable-self.price
+
+classname.class_variable = default_value
+obj = classname(value1,value2)
+obj2= classname(value1,value2)
+
+print(p1.attr1)
+
+
+## classname.method(object) --> the reference of obj is capture by self.
+
+## Instance variable ==> unique and separate for each class object.
+
+## Class varibale --> single value shared by all object.
+  
+## Finding and printing all class variable and instances related to an object --> print(ojb.__dict__)
+
+## Class method as constructor using @classmethod decorator. syntax ==> @classmethod 
+                                                                        def class_method(cls,string)
+                                                                        attr1,att2,..= string.split("'")
+                                                                        return cls(attr1,attr2,....)
+
+## Static method as normal function in class using @staticmethod decorator.
+syntax -->
+
+@staticmethod
+def static_method(arg1,arg2....): code_here 
+
+classname.static_method(value1,value2,....)
+
+
+## Encapsulation --> class package combining data and methods together.
+
+## Abstraction --> Hiding complexities from users.
+
+## Naming Convention --> all data variables and methods are public by default. so _variable || _func_ --> should be untouched like a private member.
+
+## Dunder/Magic method convention --> __name__
+
+## Name Mangling --> __variable changes to _classname__variable and then can be accessed.
+
+
+
+
+## Inheritence --> syntax ==> class derived_class(base_class): 
+                                    def init(self,base_class_attribute,new_attribute)
+                                        super().__init__(base_class_attributes)
+  
+1) Multi level Inheritence -> a super class derived from a class which is derived from another base class.
+
+2) Method Order Resolution --> syntax print(help(classname || object ) || classname.mro() || classname.__mro__ )
+
+ called function checked by compiler in same class then base class and after that in super class builtin.object class during method resolving.
+
+ or in inhertence the of MRO is from inherited to base class.
+
+3) Method Overriding --> having same function definition in inherited class and base class then inherited class function is called.
+
+4) Isinstance() function --> checking wheather an object belongs to a class or not. syntax --> print(isinstance(obj,classname)) --> True || False
+
+5) issubclass() function --> checking wheather a class is inherited by a base class. syntax --> issubclass(inherit_class,base_class) --> True || False
+
+6) Multiple Inheritence --> a class is derived from two or more subclasses as base class. syntax --> class class3(class2,class1):
+                                                                                                     def init(self,class2_attr,class1_attr,new_attr):
+7) MRO in multiple is Class3 then class2 then class1.
+
+8) Dunder Methods ==> methods having __Methodname__ in syntax. __init__() etc  used to convert class object to printable class object. 
+
+#) repr(representive) dunder method when we create some info about class or object.
+   syntax ==>
+
+ def __repr__(self): return f"this is class {class.__name__}"
+
+#) str dunder method when we print some info about class or object.
+   syntax ==>
+
+ def __str__(self): return f"this is class {class.__name__}"
+
+ print(classobj)
+
+
+##  Operator overloading --> Multiple use of operators. syntax ==>
+
+def __add__(self || obj1 ,obj2): return self.value + obj2.value 
+
+print(obj1+obj2)
+
+def __sub__(self || obj1 ,obj2): return self.value - obj2.value 
+
+print(obj1-obj2)
+
+def __mul__(self || obj1 ,obj2): return self.value * obj2.value 
+
+print(obj1*obj2)
+
+def __div__(self || obj1 ,obj2): return self.value / obj2.value 
+
+print(obj1/obj2)
+
+
+def __gt__(self || obj1 ,obj2): return self.value > obj2.value 
+
+print(obj1>obj2)
+
+## Polymorphism --> Using data in many forms. ex --> + operator , method overriding, operator overloading ,function over loading.
+
+
+##  Built In errors ==>
+
+1) Syntax error.
+
+2) Indentation Error.
+
+3) Name Error. --> variable is not defined.
+
+4) Type error. int + str
+
+5) Index error. index not exists.
+
+6) Value error. s= int("abc")
+
+7) Attribute error . Attribute does not exists.
+
+8) Key Error. Key does not exists in dictionary.
+ 
+
+## Raising Error on fault option or data.
+
+if condition:code_here
+else: raise error_type(" string ")  errortype => valueError ,TypeError
+
+
+
+## NotImplementedError raising in multilevel inheritence.
+
+class a:
+  def sound(self): raise NotImplementedError(" You have to define this method in subclasses")  ==> Abstract Method (Not in use)
+
+
+## Exception Handeling ==> using try,except ==> errors at execution time.
+
+syntax ==> while True:
+                      try: code_here            ==> try a block of lines for error and pass error to except else not.
+                           break
+                      except ValueError: code_here
+                      except: code_here
+
+
+
+## Else block ==>     try: code_here            
+                           break
+                      except ValueError: code_here
+                      except: code_here
+                      else: runs when there is no exception.
+                      finally: runs every time exception may comes or not.
+
+
+## Custom error ==>syntax ==>
+
+class New_custom_error(Predefined_error_type): pass
+
+if condition: raise new_custom_error(" message ")
+
+
+##  Python Debugger
+
+1) Set_Trace
+2) Execute code line by line
+3) Use python debugger module(pdb) ==> import pdb
+
+
+syntax ==> 
+
+import pdb
+pdb.set_trace() ==> stop execution at each line and press l to traverse lines and n to execute them line and c to continous run and q to quit.
+program_code
+
+
+
+
+## Reading and writing text files
+
+1) open() function. syntax file_obj = open(r'path_to_file\filenname.type','r','w','r+,'a')
+                                      print(file_obj.read()) ==>read() gives data in string and pointer goes to eof.
+                                      file_obj.close()
+
+2) tell() method to find out current cursor position. syntax --> print(file_obj.tell())
+
+3) seek() method to change cursor position. syntax file_obj.seek(position)
+
+4) Readline() method . read one line at a time. syntax ==> print(file_obj.readline(),end='')
+
+5) readlines() method . make a single list of all lines. syntax==> file_obj.readlines()
+
+6) Checking filename using data descriptor. syntax file_obj.name   file name
+                                                   file_obj.closed --> True || False
+
+7) Slicing in readline().
+
+for i in file_obj.readline()[:2] : print(i,end="")
+
+8) With block context manager for file reading and writing.
+
+syntax==> no need to close file or check validity of file.
+ 
+1)
+
+with open('filename',mode) as file_obj:
+          file_obj.write(" My name is this ")
+          print(f.read())
+
+
+2) Creating a file using bash. syntax echo -e "content">> filename.type
+
+3) r+ mode overwrites so move file pointer to last as ==> file_obj.seek(file_obj.read())
+
+4) Moving comma separated values from one text file to another.
+
+syntax ==>
+
+
+with open(r"C:\Users\Neo-PC\Desktop\temp.txt","r") as f:
+    with open(r"C:\Users\Neo-PC\Desktop\temp1.txt","r+") as g:
+        for i in f.readlines():
+            l,m=i.split(",")
+            g.write(f" name {l} having salary is {m} ")
+        print(g.read())
+   
+
+5) Reading emoji from file.
+
+syntax ==>
+
+with open('filename','r+',encoding='utf-8') as file_obj : code_here
+
+
+6) Reading a limited character of file.
+
+syntax ==> file_obj.read(no_of_characters)
+
+
+
+
+##  Working with Csv files ( Comma separated Values ) ==> used to store tabular data .ex ==> name,email,phone ==> header
+                                                                                             kim,jim,20       ==> data
+
+and delimiter is "," but you can use any symbol.
+
+
+1) Reading csv ==>
+
+from csv import reader
+with open("filename",'r+") as file_obj:
+         csv_reader = reader(file_obj,delimiter_if_not_comma)  ==> a iterator
+         for i in list(csv_reader): print(i)  ==> print row wise data.
+
+
+                                                                                                         
+2) Reading csv with dictreader class as a ordered dictionary.
+
+syntax ==>
+
+from csv import dictreader
+with open("filename",'r+") as file_obj:
+         csv_reader = dictreader(file_obj,delimiter_if_not_comma)  ==> a iterator
+         for i in csv_reader: print(i['any_csv_header'])  ==> print row wise data.
+
+
+3) Writing csv with writer . syntax ==>
+
+from csv import writer
+with open("filename",'r+",newline="") as file_obj:
+     csv_writer = writer(file_obj)
+     csv_writer.writerow(enter_list_of_pair_values)
+
+
+from csv import writer
+with open("filename",'r+",newline="") as file_obj:
+     csv_writer = writer(file_obj)
+     csv_writer.writerows(enter_list_of_list)
+
+
+3) Writing csv with dictwriter . syntax ==>
+
+from csv import dictwriter
+with open("filename",'r+",newline="") as file_obj:
+     csv_writer = dictwriter(file_obj,fieldnames =[a_list_of_headers])
+     csv_writer.writeheader()
+     csv_writer.writerow(enter_dict_of_pair_values)
+             
+
+from csv import dictwriter
+with open("filename",'r+",newline="") as file_obj:
+     csv_writer = dictwriter(file_obj,fieldnames =[a_list_of_headers])
+     csv_writer.writeheader()
+     csv_writer.writerows(enter_list_of_dict_of_pair_values)
+
+
+
+
+##  Os Module ==>
+
+syntax --> import os
+
+1) os.getcwd() ==> gives current working directory as print.
+
+2) os.mkdir(r'path\directory') ==> creat folder in given path.  Can't create already exist function.
+
+3) os.path(r'path\directory) ==> T/F check folder exits or not.
+
+4) open(r'path\filename','a').close() ==> to create a file
+
+5) os.chdir(r'path\filename','a')
+
+6) os.listdir(r'path') ==> list all items in a given path
+
+7) for i in os.listdir():
+       print(os.path.join(os.getcwd,i)) ==> print current directory with paths also.
+
+8) os.walk(r'path') ==> creating list of all files under a folder or subfolders and returns a iterator/generator.
+
+syntax ==>
+
+obj = os.walk(r'path')     ==> iterator
+for current_path,folder_names,file_names in obj:
+   print(current_path,folder_names,file_names)
+
+9) os.rmdir() ==> to delete empty directory.
+
+
+10) Deleting a non empty folder using shutil module . 
+
+syntax==>
+import shutil 
+shutil.rmtree(r'path')
+
+11) Copy a whole directory.
+
+syntax ==> shutil.copytree("path\copeid_folder","where_to_copy\new_folder")
+
+12) Copy a file.
+syntax ==> shutil.copytree("path\copeid_file","where_to_copy")
+
+13) shutil.move("path\moving_file","where_to_move\newname")
+
+
+
+## Editing Images with python using Pillow library==>
+
+pip install Pillow
+
+from PIL import Image
+
+img_obj = Image.open(r'path\filename.extension')
+img_obj.save(r'path\filename.new_extension')
+img_obj.show() ==> to show image.
+
+1) Resizing Image using thumbnail method ==> size_in_pixels = (length,breadth) ==>tuple
+                                             img_obj.thumbnail(size_in_pixels)
+                                             img_obj.save(r'path\filename.new_extension')
+
+
+2) Renaming all jpg to png in a folder.
+
+import os
+from PIL import Image 
+for i in os.listdir():
+    if i.endswith('.jpg'):
+       img_obj=Image.open(i)
+       name,ext=os.path.splitext(i)
+       img_obj.save(f"{name}.png")
+
+
+3) Changing sharpness
+
+from PIL import Image,ImageEnhance
+
+enhancer = ImageEnhance.sharpness(r'path\file.type')    # Sharpness is a class.
+img_obj = Image.open(r'path\file.type')
+enhancer.enhance(number).save(r'path\file.type')                  # number: 0 = blurr  1= normal  2=image with increased sharpness
+
+
+4) Changing color ==>
+
+from PIL import Image,ImageEnhance
+
+enhancer = ImageEnhance.color(r'path\file.type')    # color is a class.
+img_obj = Image.open(r'path\file.type')
+enhancer.enhance(number).save(r'path\file.type')                    # number: 0 = black and white  1= normal  2=different color
+
+
+5) Brightness ==>
+
+from PIL import Image,ImageEnhance
+
+enhancer = ImageEnhance.brightness(r'path\file.type')    # Brightness is a class.
+img_obj = Image.open(r'path\file.type')
+enhancer.enhance(number).save(r'path\file.type')                    # number: 0 = black  1= normal  2=different brightness
+
+6) Contrast ==>
+
+from PIL import Image,ImageEnhance
+
+enhancer = ImageEnhance.contrast(r'path\file.type')    # contrast is a class.
+img_obj = Image.open(r'path\file.type')
+enhancer.enhance(number).save(r'path\file.type')                    # number: 0 = black  1= normal  2=different brightness
+
+
+7) Image filtering ==>
+
+from PIL import Image,ImageEnhance,ImageFilter
+img_obj = Image.open(r'path\file.type')
+img_obj.filter(ImageFilter.GaussianBlurr(radius = number)).save(r'path\file.type')
+
+
+
+## Creating a Project to moves different extensions==>
+
+
+import os,shutil
+
+ext={ 'Audio_ext':('.mp3','.wav'),
+'Video_ext':('.mp4','.mkv'),
+'Document_ext':('.ppt','.pdf'),
+'Image_ext':('.jpg','.png') }
+
+fpath=input(" Enter folder-path ")
+def f(fp,ex):
+       files=[]
+       for i in os.listdir(fp):
+              for j in ex:
+                     if i.endswith(j):files.append(i)
+       return files
+
+for i , j in ext.items():
+       for t in os.listdir(fpath):
+              if t.endswith(j):
+                     fl=i.split('_')[0] + " Files"
+                     fnpath=os.path.join(fpath,fl)
+                     if fl in os.listdir(fpath):
+                            for k in f(fpath,j):
+                                   ip=os.path.join(fpath,k)
+                                   shutil.move(ip,fnpath)
+                     else:
+                             os.mkdir(fnpath)
+                             for k in f(fpath,j):
+                                    ip=os.path.join(fpath,k)
+                                    shutil.move(ip,fnpath)
+
+
+
+## Creating GUI using tkinter ==>
+
+import tkinter 
+root=tkinter.Tk()   # Tk is class in tkinter and Tk() is constructor initializing root.
+root.mainloop()     #method inside Tk prints GUI window for infinite time
+
+
+from tkinter import *
+root=Tk()   # Tk is class in tkinter and Tk() is constructor initializing root.
+root.mainloop()     #method inside Tk prints GUI window for infinite time
+
+
+0) Renaming module ==>
+import tkinter as tk
+root=tk.Tk()   # Tk is class in tkinter and Tk() is constructor initializing root.
+root.mainloop()     #method inside Tk prints GUI window for infinite time
+
+widgets ==> buttons,radio buttons,labels are under Tk and Ttk class. ttk is subclass having more efficient widgets then Tk.
+
+
+1) changing Title ==> root.title("string")
+
+2) Label ==> any text or label on app
+
+import tkinter as ttk
+root=ttk.Tk()
+ttk.Label(root,text=" I m an AI ").pack()   ## Label is class under ttk and Label() is constructor. Only Created pack() will print.
+root.mainloop()
+
+import tkinter as ttk
+root=ttk.Tk()
+obj_label=ttk.Label(root,text=" I m an AI ")
+obj_label.grid(row=0,column=0,sticky=tk.w)
+root.mainloop()
+
+*Note for two labels row and column pair must be different otherwise overwriting happens.
+
+
+3) Creating entry box ==>
+
+var=ttk.StringVar()
+entrybox = ttk.Entry(root,width=16,textvariable=var)
+entrybox.grid(row=0,column=1)
+
+
+4) Creating a Button ==>
+
+## making callback function for button ==>
+
+def action:
+            print(var.get())
+but=ttk.Button(root,text="Start",command = func_name)
+but.grid(row=0,column=2)
+
+
+5) Combo Box creation ==>
+
+cb=ttk.ComboBox(root,width=16)
+cb.grid(row=2,column=2) 
+
+
+
+
+
+
+
+#############################   Text Editor using Tkinter  ########################################
+
+
+import tkinter as tk
+from tkinter import ttk
+from tkinter import colorchooser,font,messagebox,filedialog
+import os
+
+
+root = tk.Tk()
+root.geometry('1200x800')
+root.title("Editor")
+root.wm_iconbitmap('icon.ico')
+main_menu=tk.Menu(root)
+
+##################### main menu ###############################
+
+# Cascade 
+file=tk.Menu(main_menu,tearoff=False)
+edit=tk.Menu(main_menu,tearoff=False)
+view=tk.Menu(main_menu,tearoff=False)
+color_theme=tk.Menu(main_menu,tearoff=False)
+main_menu.add_cascade(label="File",menu=file)
+main_menu.add_cascade(label="Edit",menu=edit)
+main_menu.add_cascade(label="View",menu=view)
+main_menu.add_cascade(label="Color theme",menu=color_theme)
+
+#file icons
+new_icon= tk.PhotoImage(file='icons2/new.png')
+open_icon= tk.PhotoImage(file='icons2/open.png')
+save_icon= tk.PhotoImage(file='icons2/save.png')
+save_as_icon= tk.PhotoImage(file='icons2/save_as.png')
+exit_icon= tk.PhotoImage(file='icons2/exit.png')
+
+
+
+## Edit icon
+copy_icon=tk.PhotoImage(file='icons2/copy.png')
+paste_icon=tk.PhotoImage(file='icons2/paste.png')
+cut_icon=tk.PhotoImage(file='icons2/cut.png')
+clear_all_icon=tk.PhotoImage(file='icons2/clear_all.png')
+find_icon=tk.PhotoImage(file='icons2/find.png')
+
+#View icon
+tool_bar_icon=tk.PhotoImage(file='icons2/tool_bar.png')
+status_bar_icon=tk.PhotoImage(file='icons2/status_bar.png')
+
+## Color Theme icon
+light_default_icon=tk.PhotoImage(file='icons2/light_default.png')
+light_plus_icon=tk.PhotoImage(file='icons2/light_plus.png')
+dark_icon=tk.PhotoImage(file='icons2/dark.png')
+red_icon=tk.PhotoImage(file='icons2/red.png')
+monokai_icon=tk.PhotoImage(file='icons2/monokai.png')
+night_plus_icon=tk.PhotoImage(file='icons2/night_blue.png')
+
+
+color_icons=(light_default_icon,light_plus_icon,dark_icon,red_icon,monokai_icon,night_plus_icon)
+theme_choice = tk.StringVar()
+
+color_dict={'Light Default':('#000000','#ffffff'),
+'Light Plus':('#474747','#e0e0e0'),'Dark':('#c4c4c4','#2d2d2d'),
+'Red':('#2d2d2d','#ffe8e8'),'Monokai':('#d3b774','#474747'),
+'Night Plus':('#ededed','#6b9dc2')}
+
+##################### Toolbar ###############################
+
+#font box
+tool_bar=ttk.Label(root)
+tool_bar.pack(side=tk.TOP,fill=tk.X)
+font_tuple=tk.font.families()
+font_family=tk.StringVar()
+font_box=ttk.Combobox(tool_bar,width=30,textvariable=font_family,state='readonly')
+font_box['values']=font_tuple
+font_box.current(11)
+font_box.grid(row=0,column=0,padx=5)
+
+# size box
+size_var=tk.IntVar()
+font_size=ttk.Combobox(tool_bar,width=15,textvariable=size_var,state='readonly')
+font_size['values']=tuple(range(8,80,2))
+font_size.current(2)
+font_size.grid(row=0,column=1,padx=5)
+
+## Bold button
+bold_icon=tk.PhotoImage(file='icons2/bold.png')
+
+bold_btn=ttk.Button(tool_bar,image=bold_icon)
+bold_btn.grid(row=0,column=2,padx=5)
+
+# Italic Button
+italic_icon=tk.PhotoImage(file='icons2/italic.png')
+italic_btn=ttk.Button(tool_bar,image=italic_icon)
+italic_btn.grid(row=0,column=3,padx=5)
+
+# Underline Button
+underline_icon=tk.PhotoImage(file='icons2/underline.png')
+underline_btn=ttk.Button(tool_bar,image=underline_icon)
+underline_btn.grid(row=0,column=4,padx=5)
+
+# Font Color Button
+font_color_icon=tk.PhotoImage(file='icons2/font_color.png')
+font_color_btn=ttk.Button(tool_bar,image=font_color_icon)
+font_color_btn.grid(row=0,column=5,padx=5)
+
+## Align Left Button
+
+align_left_icon=tk.PhotoImage(file='icons2/al.png')
+align_left_btn=ttk.Button(tool_bar,image=align_left_icon)
+align_left_btn.grid(row=0,column=6,padx=5)
+
+## Ailgn Center Button
+align_center_icon=tk.PhotoImage(file='icons2/ac.png')
+align_center_btn=ttk.Button(tool_bar,image=align_center_icon)
+align_center_btn.grid(row=0,column=7,padx=5)
+
+## Align Right Button
+align_right_icon=tk.PhotoImage(file='icons2/ar.png')
+align_right_btn=ttk.Button(tool_bar,image=align_right_icon)
+align_right_btn.grid(row=0,column=8,padx=5)
+
+#####################  Text Editor ###############################
+
+text_editor=tk.Text(root)
+text_editor.config(wrap='word',relief=tk.FLAT)
+scroll_bar=tk.Scrollbar(root)
+text_editor.focus_set()
+scroll_bar.pack(side=tk.RIGHT,fill=tk.Y)
+text_editor.pack(fill=tk.BOTH,expand=True)
+scroll_bar.config(command=text_editor.yview)
+text_editor.config(yscrollcommand=scroll_bar.set)
+
+# Font functionality
+
+current_font_family='Arial'
+current_font_size=12
+
+def change_font(root):
+       global current_font_family
+       current_font_family=font_family.get()
+       text_editor.configure(font=(current_font_family,current_font_size))
+
+def change_font_size(root):
+       global current_font_size
+       current_font_size=size_var.get()
+       text_editor.configure(font=(current_font_family,current_font_size))
+
+font_size.bind("<<ComboboxSelected>>",change_font_size)
+font_box.bind("<<ComboboxSelected>>",change_font)
+
+text_editor.configure(font=('Arial',12))
+
+
+# Buttons Functionality
+
+# Bold
+def bold():
+       b=tk.font.Font(font=text_editor['font']).actual()
+       if b['weight']=='normal':
+              text_editor.configure(font=(current_font_family,current_font_size,'bold'))
+       if b['weight']=='bold':
+              text_editor.configure(font=(current_font_family,current_font_size,'normal'))
+bold_btn.configure(command=bold)
+
+#Italic
+def italic():
+       b=tk.font.Font(font=text_editor['font']).actual()
+       if b['slant']=='roman':
+              text_editor.configure(font=(current_font_family,current_font_size,'italic'))
+       if b['slant']=='italic':
+              text_editor.configure(font=(current_font_family,current_font_size,'roman'))
+italic_btn.configure(command=italic)
+
+# Under Line 
+def underline():
+       b=tk.font.Font(font=text_editor['font']).actual()
+       if b['underline']==0:
+              text_editor.configure(font=(current_font_family,current_font_size,'underline'))
+       if b['underline']==1:
+              text_editor.configure(font=(current_font_family,current_font_size,'normal'))
+underline_btn.configure(command=underline)
+
+
+# Font Color
+
+def change_font_color():
+       color_var=tk.colorchooser.askcolor()
+       text_editor.configure(fg=color_var[1])
+
+font_color_btn.configure(command=change_font_color)
+
+
+## Align Left 
+
+def align_left():
+       text_content=text_editor.get(1.0,'end')
+       text_editor.tag_config('left',justify=tk.LEFT)
+       text_editor.delete(1.0,tk.END)
+       text_editor.insert(tk.INSERT,text_content,'left')
+align_left_btn.configure(command=align_left)
+
+## Align Center 
+
+def align_center():
+       text_content=text_editor.get(1.0,'end')
+       text_editor.tag_config('center',justify=tk.CENTER)
+       text_editor.delete(1.0,tk.END)
+       text_editor.insert(tk.INSERT,text_content,'center')
+align_center_btn.configure(command=align_center)
+
+## Align Right
+
+def align_right():
+       text_content=text_editor.get(1.0,'end')
+       text_editor.tag_config('right',justify=tk.RIGHT)
+       text_editor.delete(1.0,tk.END)
+       text_editor.insert(tk.INSERT,text_content,'right')
+align_right_btn.configure(command=align_right)
+
+##################### Status Bar ###############################
+
+status_bar=ttk.Label(root,text='Status Bar')
+status_bar.pack(side=tk.BOTTOM)
+
+text_changed= False
+def changed(event=None):
+       global text_changed
+       if text_editor.edit_modified():
+              text_changed=True
+              words=len(text_editor.get(1.0,'end-1c').split())
+              characters=len(text_editor.get(1.0,'end-1c'))
+              status_bar.config(text=f' Characters : {characters} Words : {words}')
+       text_editor.edit_modified(False)
+
+text_editor.bind('<<Modified>>',changed)
+
+
+##################### Addition Functionality ###############################
+
+# Global Variable
+url=''
+
+# new 
+def new_file(event=None):
+       global url
+       url=''
+       text_editor.delete(1.0,tk.END)
+
+# open
+
+def open_file(event=None):
+       global url
+       url=filedialog.askopenfilename(initialdir=os.getcwd(),title='Select File',filetypes=(('Text File','*.txt'),('Pdf File','*.pdf'),('All Files','*.*')))
+       try:
+              with open(url,'r') as fr:
+                     text_editor.delete(1.0,tk.END)
+                     text_editor.insert(1.0,fr.read())
+       except FileNotFoundError:
+              return
+       except:
+              return
+       root.title(os.path.basename(url))
+
+# Save
+
+def save_file(event=None):
+       global url
+       try:
+              if url:
+                     content=str(text_editor.get(1.0,tk.END))
+                     with open(url,'w',encoding='utf-8') as fw:
+                            fw.write(content)
+              else:
+                     url=filedialog.asksaveasfile(mode='w',defaultextension='.txt',filetypes=(('Text File','*.txt'),('Pdf File','*.pdf'),('All Files','*.*')))
+                     content2=text_editor.get(1.0,tk.END)
+                     url.write(content2)
+                     url.close()
+       except:
+              return
+
+# Save As
+def save_as(event=None):
+       global url
+       try:
+              content=str(text_editor.get(1.0,tk.END))
+              url=filedialog.asksaveasfile(mode='w',defaultextension='.txt',filetypes=(('Text File','*.txt'),('Pdf File','*.pdf'),('All Files','*.*')))
+              url.write(content)
+              url.close()
+       except:
+              return
+
+## Exit 
+
+def exit_file(event=None):
+       global url,text_changed
+       try:
+              if text_changed:
+                     mbox = messagebox.askyesnocancel('Warning','Do you want to save the file ?')
+                     if mbox is True:
+                            if url:
+                                   content=text_editor.get(1.0,tk.END)
+                                   with open(url,'w','utf-8') as fw:
+                                          fw.write(content)
+                                          root.destroy()
+                            else:
+                                   content2=str(text_editor.get(1.0,tk.END))
+                                   url=filedialog.asksaveasfile(mode='w',defaultextension='.txt',filetypes=(('Text File','*.txt'),('Pdf File','*.pdf'),('All Files','*.*')))
+                                   url.write(content2)
+                                   url.close()
+                                   root.destroy()
+                     elif mbox is False:
+                            root.destroy()
+              else:
+                     root.destroy()
+       
+       except:
+              return
+                            
+
+       
+
+#File Commands
+
+file.add_command(label='New',image=new_icon,compound=tk.LEFT,accelerator = 'Ctrl+N',command=new_file)
+file.add_command(label='Open',image=open_icon,compound=tk.LEFT,accelerator = 'Ctrl+O',command=open_file)
+file.add_command(label='Save',image=save_icon,compound=tk.LEFT,accelerator = 'Ctrl+S',command=save_file)
+file.add_command(label='Save As',image=save_as_icon,compound=tk.LEFT,accelerator = 'Ctrl+ALT+S',command=save_as)
+file.add_command(label='Exit',image=exit_icon,compound=tk.LEFT,accelerator = 'Ctrl+Q',command=exit_file)
+
+# Find
+
+def find_func(event=None):
+       def find():
+              word=find_input.get()
+              text_editor.tag_remove('match','1.0',tk.END)
+              matches=0
+              if word:
+                     start_pos='1.0'
+                     while True:
+                            start_pos=text_editor.search(word,start_pos,stopindex=tk.END)
+                            if not start_pos:
+                                   break
+                            end_pos=f'{start_pos}+{len(word)}c'
+                            text_editor.tag_add('match',start_pos,end_pos)
+                            matches+=1
+                            start_pos=end_pos
+                            text_editor.tag_config('match',foreground='red',background='yellow')
+
+
+# Replace       
+       
+       def replace(): 
+              word=find_input.get()
+              replace_text=replace_input.get()
+              content=text_editor.get(1.0,tk.END)
+              new_content=content.replace(word,replace_text)
+              text_editor.delete(1.0,tk.END)
+              text_editor.insert(1.0,new_content)
+
+       find_dialog=tk.Toplevel()
+       find_dialog.geometry("450x200+500+200")
+       find_dialog.title("Find")
+       find_dialog.resizable(0,0)
+
+       #frame
+
+       find_frame=ttk.LabelFrame(find_dialog,text='Find/Replace')
+       find_frame.pack(pady=20)
+       text_find_label=ttk.Label(find_frame,text='Find : ')
+       text_replace_label=ttk.Label(find_frame,text='Replace : ')
+
+       find_input=ttk.Entry(find_frame,width=30)
+       replace_input=ttk.Entry(find_frame,width=30)
+
+       find_btn=ttk.Button(find_frame,text='Find',command=find)
+       replace_btn=ttk.Button(find_frame,text='Replace',command=replace)
+
+       text_find_label.grid(row=0,column=0,padx=4,pady=4)
+       text_replace_label.grid(row=1,column=0,padx=4,pady=4)
+
+       find_input.grid(row=0,column=1,padx=4,pady=4)
+       replace_input.grid(row=1,column=1,padx=4,pady=4)
+
+       find_btn.grid(row=2,column=0 , padx=8,pady =4)
+       replace_btn.grid(row=2,column=1, padx=8,pady =4)
+
+       
+       find_dialog.mainloop()
+
+
+
+
+# Edit Commands
+edit.add_command(label='Copy',image=copy_icon,compound=tk.LEFT,accelerator='Ctrl+C',command=lambda:text_editor.event_generate('<Control c>'))
+edit.add_command(label='Paste',image=paste_icon,compound=tk.LEFT,accelerator='Ctrl+V',command=lambda:text_editor.event_generate('<Control v>'))
+edit.add_command(label='Cut',image=cut_icon,compound=tk.LEFT,accelerator='Ctrl+X',command=lambda:text_editor.event_generate('<Control x>'))
+edit.add_command(label='Clear All',image=clear_all_icon,compound=tk.LEFT,accelerator='Ctrl+Alt+X',command=lambda:text_editor.delete(1.0,tk.END))
+edit.add_command(label='Find',image=find_icon,compound=tk.LEFT,accelerator='Ctrl+F',command=find_func)
+
+#View Commands
+
+show_toolbar=tk.BooleanVar()
+show_statusbar=tk.BooleanVar()
+show_statusbar.set(True)
+show_toolbar.set(True)
+
+def hide_toolbar():
+       global show_toolbar
+       if show_toolbar:
+              tool_bar.pack_forget()
+              show_toolbar=False
+       else:
+              text_editor.pack_forget()
+              status_bar.pack_forget()
+              tool_bar.pack(side=tk.TOP,fill=tk.X)
+              text_editor.pack(fill=tk.BOTH,expand=True)
+              status_bar.pack(side=tk.BOTTOM)
+              show_toolbar=True
+
+def hide_statusbar():
+              global show_statusbar
+              if show_statusbar:
+                     status_bar.pack_forget()
+                     show_statusbar=False
+              
+              else:
+                     status_bar.pack(side=tk.BOTTOM)
+                     show_statusbar=True
+
+
+
+view.add_checkbutton(label="ToolBar",image=tool_bar_icon,onvalue=True,variable=show_toolbar,offvalue=0,compound=tk.LEFT,command=hide_toolbar)
+view.add_checkbutton(label="StatusBar",image=status_bar_icon,onvalue=True,variable=show_statusbar,offvalue=0,compound=tk.LEFT,command=hide_statusbar)
+
+
+
+## Color_theme Commands
+count=0
+def change_theme():
+       chosen_theme=theme_choice.get()
+       color_tuple=color_dict.get(chosen_theme)
+       fg_color=color_tuple[0]
+       bg_color=color_tuple[1]
+       text_editor.config(background=bg_color,fg=fg_color)
+
+for i in color_dict:
+       color_theme.add_radiobutton(label=i,image=color_icons[count],variable=theme_choice,compound=tk.LEFT,command=change_theme)
+       count+=1
+##***************************************************************************##
+
+
+root.config(menu=main_menu)
+
+## Bind Shortcut Keys
+
+root.bind('<Control-n>',new_file)
+root.bind('<Control-o>',open_file)
+root.bind('<Control-s>',save_file)
+root.bind('<Control-Alt-s>',save_as)
+root.bind('<Control-q>',exit_file)
+
+root.mainloop()
+
+
+
+
+
+
+
